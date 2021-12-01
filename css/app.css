@@ -1,0 +1,186 @@
+/* Variables */
+
+:root {
+  /* Primarios */
+  --pale__blue: hsl(225, 100%, 94%);
+  --bright__blue: hsl(245, 75%, 52%);
+  /* Neutrales */
+  --very_pale__blue: hsl(225, 100%, 98%);
+  --desaturated__blue: hsl(224, 23%, 55%);
+  --dark__blue: hsl(223, 47%, 23%);
+}
+
+/* Globales */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background: var(--pale__blue);
+}
+
+/* Contenedor principal*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  height: 90vh;
+  background-image: url(../assets/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+/* Estilos card */
+.card {
+  width: 90%;
+  height: 570px;
+  min-width: 288px;
+  max-width: 325px;
+  min-height: 150px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 30px -10px var(--desaturated__blue);
+  background-color: #fff8f8;
+}
+
+/* hero */
+
+.card-hero {
+  width: 100%;
+  height: 160px;
+  border-radius: 20px 20px 0 0;
+  background-image: url(../assets/illustration-hero.svg);
+  background-size: cover;
+}
+
+/* información principal card */
+.card-info {
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.card-info h1 {
+  color: var(--dark__blue);
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.card-info p {
+  margin-top: 1.5rem;
+  color: rgba(0, 0, 77, 0.4);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  padding: 0 3rem;
+}
+
+/* información plan card */
+.card-plan {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--very_pale__blue);
+  padding: 10px 5px;
+  width: 280px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 10px;
+}
+
+.music {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../assets/icon-music.svg");
+  background-repeat: no-repeat;
+}
+
+.card-plan--prices {
+  margin-left: -20px;
+}
+
+.card-plan--prices p:first-child {
+  color: var(--dark__blue);
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.card-plan--prices p:nth-child(2) {
+  font-size: 1.6rem;
+  color: rgba(0, 0, 77, 0.4);
+  margin-top: 5px;
+}
+
+.card-plan a {
+  color: va(--bright__blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+/* Buttons */
+
+.card-buttons {
+  margin-top: 20px;
+}
+
+.card-buttons a:first-child {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  background-color: var(--bright__blue);
+  color: #fff8f8;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 16px 0;
+  border-radius: 12px;
+}
+
+.card-buttons a:nth-child(2) {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  color: grey;
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* Mediaquerie Desktop */
+
+@media (min-width: 930px) {
+  .container {
+    background-image: url(../assets/pattern-background-desktop.svg);
+  }
+
+  .card-plan a:hover {
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  .card-buttons a:first-child:hover {
+    opacity: 0.5;
+  }
+  .card-buttons a:nth-child(2):hover {
+    color: var(--dark__blue);
+  }
+}
